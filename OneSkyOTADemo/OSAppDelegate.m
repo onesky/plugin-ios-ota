@@ -9,23 +9,25 @@
 #import "OSAppDelegate.h"
 #import <OneSkyOTAPlugin/OneSkyOTAPlugin.h>
 
-//#define ONESKY_API_KEY @""
-//#define ONESKY_API_SECRET @""
-//#define ONESKY_PROJECT_ID @""
-
 @implementation OSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
-    [OneSkyOTAPlugin provideAPIKey:ONESKY_API_KEY
-                         APISecret:ONESKY_API_SECRET
-                         projectID:ONESKY_PROJECT_ID];
+    /* 
+     For security reason you might not want to embed the API secret in
+     the source code of your application, in this case you can skip the 
+     API secret by setting the string output API privacy to public, 
+     Go to "Project settings > Privacy > String out API" on OneSky platform
+     for details.
+     */
+    [OneSkyOTAPlugin provideAPIKey:@"Kc9XXu3bsFpAJsDI6BjX08WoRtYLPhtp"
+                         APISecret:nil
+                         projectID:@"32417"];
     [OneSkyOTAPlugin checkForUpdate];
+    
+    // Test OSLocalizedString calls
+    NSLog(@"Monday = %@", OSLocalizedString(@"Monday", nil));
+    NSLog(@"Tuesday = %@", OSLocalizedString(@"Tuesday", nil));
 
     return YES;
 }

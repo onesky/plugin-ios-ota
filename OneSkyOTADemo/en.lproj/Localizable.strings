@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  OneSkyOverTheAirSDK
+
+  Created by Bret Cheng on 26/3/14.
+  Copyright (c) 2014 OneSky Inc. All rights reserved.
+*/
+
+"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+
