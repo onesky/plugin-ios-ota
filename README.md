@@ -6,7 +6,7 @@ Over-the-air translation update for your iOS apps with OneSky.
 Installation
 ------------
 
-1. Download [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.5.0/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
+1. Download [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.8.0/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
 2. Under **Build Settings** of the target, add ```-ObjC``` to **Other Linker Flags** setting.
 
 Integration
@@ -27,6 +27,7 @@ Add the following code in under ```-application:didFinishLaunchingWithOptions:``
 [OneSkyOTAPlugin checkForUpdate];
 ```
 
+
 Optionally add  ```[OneSkyOTAPlugin checkForUpdate]``` in 
 ```- (void)applicationDidBecomeActive:(UIApplication*)application```
 
@@ -34,6 +35,18 @@ Optionally add  ```[OneSkyOTAPlugin checkForUpdate]``` in
 ```ONESKY_PROJECT_ID``` can be found under **All Projects** page.
 
 **NOTE:** The above parameters must be set before calling ```-checkForUpdate```.
+
+
+Security
+---------------
+
+For security reason you might not want to embed the API secret in the source code of your application, in this case you can skip the API secret by setting the string output API privacy to public, go to "Project settings > Privacy > String out API" on OneSky platform for more detail.
+
+``` objective-c
+[OneSkyOTAPlugin provideAPIKey:ONESKY_API_KEY
+                     APISecret:nil
+                     projectID:ONESKY_PROJECT_ID];
+```
 
 Usage
 ----------------
@@ -43,6 +56,15 @@ Simply replace ```NSLocalizedString``` with ```OSLocalizedString```, the plugin 
 ``` objective-c
 OSLocalizedString(key, comment)
 OSLocalizedStringFromTable(key, tbl, comment)
+```
+
+Interface Builder Support
+-------------------------
+
+The plugin also supports OTA translation for **Interface Builder** files (`.xib` and `.storyboard`), translations will be set at ```-[UIView awakeFromNib]``` automatically. To enable **Interface Builder** support, add a `Run Script Build Phase` to your app target in `Project Editor`, copy and paste the following script into the script area:
+
+```
+./OneSkyOTAPlugin.framework/ibsupport
 ```
 
 Support

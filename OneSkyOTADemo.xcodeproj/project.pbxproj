@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB6757DD19933E1C00E96A12 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6757DB19933E1C00E96A12 /* Storyboard.storyboard */; };
+		FB6757E019933E3100E96A12 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB6757DE19933E3100E96A12 /* Localizable.strings */; };
 		FB7344F01980C9E40062424F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7344EF1980C9E40062424F /* Foundation.framework */; };
 		FB7344F21980C9E40062424F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7344F11980C9E40062424F /* CoreGraphics.framework */; };
 		FB7344F41980C9E40062424F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7344F31980C9E40062424F /* UIKit.framework */; };
@@ -18,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB6757DC19933E1C00E96A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		FB6757DF19933E3100E96A12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB6757E419933E4300E96A12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Storyboard.strings; sourceTree = "<group>"; };
 		FB7344EC1980C9E40062424F /* OneSkyOTADemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneSkyOTADemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7344EF1980C9E40062424F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB7344F11980C9E40062424F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +87,7 @@
 			children = (
 				FB7344FE1980C9E40062424F /* OSAppDelegate.h */,
 				FB7344FF1980C9E40062424F /* OSAppDelegate.m */,
+				FB6757DB19933E1C00E96A12 /* Storyboard.storyboard */,
 				FB7345011980C9E40062424F /* Images.xcassets */,
 				FB7344F61980C9E40062424F /* Supporting Files */,
 			);
@@ -91,6 +97,7 @@
 		FB7344F61980C9E40062424F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB6757DE19933E3100E96A12 /* Localizable.strings */,
 				FB7344F71980C9E40062424F /* OneSkyOTADemo-Info.plist */,
 				FB7344F81980C9E40062424F /* InfoPlist.strings */,
 				FB7344FB1980C9E40062424F /* main.m */,
@@ -109,6 +116,7 @@
 				FB7344E81980C9E40062424F /* Sources */,
 				FB7344E91980C9E40062424F /* Frameworks */,
 				FB7344EA1980C9E40062424F /* Resources */,
+				FB6757E519933E5C00E96A12 /* OTA IB Support */,
 			);
 			buildRules = (
 			);
@@ -135,6 +143,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FB7344E31980C9E40062424F;
 			productRefGroup = FB7344ED1980C9E40062424F /* Products */;
@@ -152,11 +161,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7344FA1980C9E40062424F /* InfoPlist.strings in Resources */,
+				FB6757E019933E3100E96A12 /* Localizable.strings in Resources */,
 				FB7345021980C9E40062424F /* Images.xcassets in Resources */,
+				FB6757DD19933E1C00E96A12 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FB6757E519933E5C00E96A12 /* OTA IB Support */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "OTA IB Support";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./OneSkyOTAPlugin.framework/ibsupport;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FB7344E81980C9E40062424F /* Sources */ = {
@@ -171,6 +199,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FB6757DB19933E1C00E96A12 /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB6757DC19933E1C00E96A12 /* Base */,
+				FB6757E419933E4300E96A12 /* en */,
+			);
+			name = Storyboard.storyboard;
+			sourceTree = "<group>";
+		};
+		FB6757DE19933E3100E96A12 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB6757DF19933E3100E96A12 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FB7344F81980C9E40062424F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
