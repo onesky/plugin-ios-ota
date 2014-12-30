@@ -6,7 +6,7 @@ Over-the-air translation update for your iOS apps with OneSky.
 Installation
 ------------
 
-1. Download [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.8.1/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
+1. Download [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.8.2/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
 2. Under **Build Settings** of the target, add ```-ObjC``` to **Other Linker Flags** setting.
 
 Integration
@@ -28,10 +28,10 @@ Add the following code in under ```-application:didFinishLaunchingWithOptions:``
 ```
 
 
-Optionally add  ```[OneSkyOTAPlugin checkForUpdate]``` in 
+Optionally add  ```[OneSkyOTAPlugin checkForUpdate]``` in
 ```- (void)applicationDidBecomeActive:(UIApplication*)application```
 
-```ONESKY_API_KEY```, ```ONESKY_API_SECRET``` can be found in **Site Settings** under **API Keys & Usage** on **OneSky Web Admin**. 
+```ONESKY_API_KEY```, ```ONESKY_API_SECRET``` can be found in **Site Settings** under **API Keys & Usage** on **OneSky Web Admin**.
 ```ONESKY_PROJECT_ID``` can be found under **All Projects** page.
 
 **NOTE:** The above parameters must be set before calling ```-checkForUpdate```.
