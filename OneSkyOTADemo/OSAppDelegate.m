@@ -28,6 +28,9 @@
     // Test OSLocalizedString calls
     NSLog(@"Monday = %@", OSLocalizedString(@"Monday", nil));
     NSLog(@"Tuesday = %@", OSLocalizedString(@"Tuesday", nil));
+    
+    // Enable debug option, default is YES
+    [OneSkyOTAPlugin setDebug:YES];
 
     return YES;
 }

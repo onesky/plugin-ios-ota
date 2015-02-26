@@ -14,11 +14,6 @@
 #define OSLocalizedStringFromTable(key, tbl, comment) \
 [OneSkyOTAPlugin localizedStringForKey:(key) value:@"" table:(tbl)]
 
-#ifdef DEBUG
-// Comment out to disable debug log
-#define OTA_DEBUG
-#endif
-
 /* 
  This notification is sent when new translation data is available and 
  downloaded, observe this notification and update IB accordingly.
@@ -74,5 +69,12 @@ extern NSString *const OneSkyOTAPluginTranslationsDidUpdateNotification;
  Method to delete cache of translations retreieved from OneSky server
  */
 + (void)deleteCache;
+
+
+/*!
+ @abstract
+ Set whether to show debug logs in console, default is YES
+ */
++ (void)setDebug:(BOOL)debug;
 
 @end
