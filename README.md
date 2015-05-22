@@ -6,7 +6,7 @@ Over-the-air translation update for your iOS apps with OneSky.
 Installation
 ------------
 
-1. Download [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.8.5/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
+1. Download [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.9.0/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
 2. Under **Build Settings** of the target, add ```-ObjC``` to **Other Linker Flags** setting.
 
 Integration
@@ -56,6 +56,15 @@ Simply replace ```NSLocalizedString``` with ```OSLocalizedString```, the plugin 
 ``` objective-c
 OSLocalizedString(key, comment)
 OSLocalizedStringFromTable(key, tbl, comment)
+```
+
+Language
+----------------
+
+The default language the plugin uses is `-[[NSLocale preferredLanguages] firstObject]`. If your app implements custom language logic, you set the language with the new API:
+
+``` objective-c
+[OneSkyOTAPlugin setLanguage:@"pt-PT"];
 ```
 
 Interface Builder Support
