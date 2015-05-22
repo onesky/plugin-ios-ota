@@ -29,6 +29,9 @@
     NSLog(@"Monday = %@", OSLocalizedString(@"Monday", nil));
     NSLog(@"Tuesday = %@", OSLocalizedString(@"Tuesday", nil));
     
+    // Force language
+    [OneSkyOTAPlugin setLanguage:@"pt-PT"];
+    
     // Enable debug option, default is YES
     [OneSkyOTAPlugin setDebug:YES];
 

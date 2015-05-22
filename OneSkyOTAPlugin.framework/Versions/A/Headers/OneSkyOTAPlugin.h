@@ -14,11 +14,11 @@
 #define OSLocalizedStringFromTable(key, tbl, comment) \
 [OneSkyOTAPlugin localizedStringForKey:(key) value:@"" table:(tbl)]
 
-/* 
+/*
  This notification is sent when new translation data is available and 
  downloaded, observe this notification and update IB accordingly.
  */
-extern NSString *const OneSkyOTAPluginTranslationsDidUpdateNotification;
+extern NSString  *const OneSkyOTAPluginTranslationsDidUpdateNotification;
 
 /*!
  @header
@@ -44,7 +44,7 @@ extern NSString *const OneSkyOTAPluginTranslationsDidUpdateNotification;
  
  @param secret The API secret can be found in Site Settings under API Keys & Usage on OneSky Web Admin.
  */
-+ (void)provideAPIKey:(NSString*)key APISecret:(NSString*)secret projectID:(NSString*)projectID;
++ (void)provideAPIKey:(NSString *)key APISecret:(NSString *)secret projectID:(NSString *)projectID;
 
 /*!
  @abstract
@@ -56,7 +56,7 @@ extern NSString *const OneSkyOTAPluginTranslationsDidUpdateNotification;
  
  @param table tableName - The receiver’s string table to search. If tableName is nil or is an empty string, the method attempts to use the table in Localizable.strings.
  */
-+ (NSString*)localizedStringForKey:(NSString*)key value:(NSString*)value table:(NSString*)tableName;
++ (NSString *)localizedStringForKey:(NSString *)key value:(NSString *)value table:(NSString *)tableName;
 
 /*!
  @abstract
@@ -76,5 +76,17 @@ extern NSString *const OneSkyOTAPluginTranslationsDidUpdateNotification;
  Set whether to show debug logs in console, default is YES
  */
 + (void)setDebug:(BOOL)debug;
+
+/*!
+ @abstract
+ Set the language to use for -localizedStringForKey:value:table: calls, default is [[NSLocale preferredLanguages] firstObject]
+ */
++ (void)setLanguage:(NSString *)language;
+
+/*!
+ @abstract
+ Get the current language used for -localizedStringForKey:value:table: calls
+ */
++ (NSString *)language:(NSString *)language;
 
 @end
