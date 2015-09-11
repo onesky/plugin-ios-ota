@@ -6,8 +6,14 @@ Over-the-air translation update for your iOS apps with OneSky.
 Installation
 ------------
 
-1. Download [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.9.1/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
+#### Download OneSkyOTAPlugin.framework
+1. [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.9.2/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
 2. Under **Build Settings** of the target, add ```-ObjC``` to **Other Linker Flags** setting.
+
+#### CocoaPods
+``` 
+pod 'OneSkyOTAPlugin', '~> 0.9.2' 
+```
 
 Integration
 -----------
@@ -72,8 +78,14 @@ Interface Builder Support
 
 The plugin also supports OTA translation for **Interface Builder** files (`.xib` and `.storyboard`), translations will be set at ```-[UIView awakeFromNib]``` automatically. To enable **Interface Builder** support, add a `Run Script Build Phase` to your app target in `Project Editor`, copy and paste the following script into the script area:
 
+#### OneSkyOTAPlugin.framework
 ```
 ./OneSkyOTAPlugin.framework/ibsupport
+```
+
+#### CocoaPods
+```
+./Pods/OneSkyOTAPlugin/OneSkyOTAPlugin/ibsupport
 ```
 
 Support
