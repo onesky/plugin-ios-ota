@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB56D8A31BA2C0C0001FB4B7 /* ibsupport in Resources */ = {isa = PBXBuildFile; fileRef = FB56D8A11BA2C0C0001FB4B7 /* ibsupport */; settings = {ASSET_TAGS = (); }; };
+		FB56D8A41BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56D8A21BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a */; settings = {ASSET_TAGS = (); }; };
 		FB6757DD19933E1C00E96A12 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6757DB19933E1C00E96A12 /* Storyboard.storyboard */; };
 		FB6757E019933E3100E96A12 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB6757DE19933E3100E96A12 /* Localizable.strings */; };
 		FB7344F01980C9E40062424F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7344EF1980C9E40062424F /* Foundation.framework */; };
@@ -16,10 +18,12 @@
 		FB7344FC1980C9E40062424F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7344FB1980C9E40062424F /* main.m */; };
 		FB7345001980C9E40062424F /* OSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7344FF1980C9E40062424F /* OSAppDelegate.m */; };
 		FB7345021980C9E40062424F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7345011980C9E40062424F /* Images.xcassets */; };
-		FB73451F1980CA770062424F /* OneSkyOTAPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB73451E1980CA770062424F /* OneSkyOTAPlugin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB56D8A01BA2C0C0001FB4B7 /* OneSkyOTAPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneSkyOTAPlugin.h; sourceTree = "<group>"; };
+		FB56D8A11BA2C0C0001FB4B7 /* ibsupport */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ibsupport; sourceTree = "<group>"; };
+		FB56D8A21BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOneSkyOTAPlugin.a; sourceTree = "<group>"; };
 		FB6757DC19933E1C00E96A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 		FB6757DF19933E3100E96A12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB6757E419933E4300E96A12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Storyboard.strings; sourceTree = "<group>"; };
@@ -35,7 +39,6 @@
 		FB7344FF1980C9E40062424F /* OSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSAppDelegate.m; sourceTree = "<group>"; };
 		FB7345011980C9E40062424F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB7345081980C9E40062424F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		FB73451E1980CA770062424F /* OneSkyOTAPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OneSkyOTAPlugin.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,19 +47,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7344F21980C9E40062424F /* CoreGraphics.framework in Frameworks */,
-				FB73451F1980CA770062424F /* OneSkyOTAPlugin.framework in Frameworks */,
 				FB7344F41980C9E40062424F /* UIKit.framework in Frameworks */,
 				FB7344F01980C9E40062424F /* Foundation.framework in Frameworks */,
+				FB56D8A41BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB56D89E1BA2C0C0001FB4B7 /* OneSkyOTAPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				FB56D89F1BA2C0C0001FB4B7 /* Headers */,
+				FB56D8A11BA2C0C0001FB4B7 /* ibsupport */,
+				FB56D8A21BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a */,
+			);
+			path = OneSkyOTAPlugin;
+			sourceTree = "<group>";
+		};
+		FB56D89F1BA2C0C0001FB4B7 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				FB56D8A01BA2C0C0001FB4B7 /* OneSkyOTAPlugin.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		FB7344E31980C9E40062424F = {
 			isa = PBXGroup;
 			children = (
 				FB7344F51980C9E40062424F /* OneSkyOTADemo */,
+				FB56D89E1BA2C0C0001FB4B7 /* OneSkyOTAPlugin */,
 				FB7344EE1980C9E40062424F /* Frameworks */,
 				FB7344ED1980C9E40062424F /* Products */,
 			);
@@ -73,7 +95,6 @@
 		FB7344EE1980C9E40062424F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB73451E1980CA770062424F /* OneSkyOTAPlugin.framework */,
 				FB7344EF1980C9E40062424F /* Foundation.framework */,
 				FB7344F11980C9E40062424F /* CoreGraphics.framework */,
 				FB7344F31980C9E40062424F /* UIKit.framework */,
@@ -162,6 +183,7 @@
 			files = (
 				FB7344FA1980C9E40062424F /* InfoPlist.strings in Resources */,
 				FB6757E019933E3100E96A12 /* Localizable.strings in Resources */,
+				FB56D8A31BA2C0C0001FB4B7 /* ibsupport in Resources */,
 				FB7345021980C9E40062424F /* Images.xcassets in Resources */,
 				FB6757DD19933E1C00E96A12 /* Storyboard.storyboard in Resources */,
 			);
@@ -182,7 +204,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ./OneSkyOTAPlugin.framework/ibsupport;
+			shellScript = ./OneSkyOTAPlugin/ibsupport;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -309,6 +331,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OneSkyOTADemo/OneSkyOTADemo-Prefix.pch";
 				INFOPLIST_FILE = "OneSkyOTADemo/OneSkyOTADemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OneSkyOTAPlugin",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -327,6 +353,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OneSkyOTADemo/OneSkyOTADemo-Prefix.pch";
 				INFOPLIST_FILE = "OneSkyOTADemo/OneSkyOTADemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OneSkyOTAPlugin",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

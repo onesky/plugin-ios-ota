@@ -7,7 +7,7 @@
 //
 
 #import "OSAppDelegate.h"
-#import <OneSkyOTAPlugin/OneSkyOTAPlugin.h>
+#import "OneSkyOTAPlugin.h"
 
 @implementation OSAppDelegate
 
