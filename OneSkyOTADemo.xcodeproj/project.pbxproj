@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB56D8A31BA2C0C0001FB4B7 /* ibsupport in Resources */ = {isa = PBXBuildFile; fileRef = FB56D8A11BA2C0C0001FB4B7 /* ibsupport */; settings = {ASSET_TAGS = (); }; };
-		FB56D8A41BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56D8A21BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a */; settings = {ASSET_TAGS = (); }; };
+		FB56D8A31BA2C0C0001FB4B7 /* ibsupport in Resources */ = {isa = PBXBuildFile; fileRef = FB56D8A11BA2C0C0001FB4B7 /* ibsupport */; };
+		FB56D8A41BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56D8A21BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a */; };
 		FB6757DD19933E1C00E96A12 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6757DB19933E1C00E96A12 /* Storyboard.storyboard */; };
 		FB6757E019933E3100E96A12 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB6757DE19933E3100E96A12 /* Localizable.strings */; };
 		FB7344F01980C9E40062424F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7344EF1980C9E40062424F /* Foundation.framework */; };
@@ -155,7 +155,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OS;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "OneSky Inc.";
 			};
 			buildConfigurationList = FB7344E71980C9E40062424F /* Build configuration list for PBXProject "OneSkyOTADemo" */;
@@ -204,7 +204,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ./OneSkyOTAPlugin/ibsupport;
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -267,6 +267,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -336,6 +337,7 @@
 					"$(PROJECT_DIR)/OneSkyOTAPlugin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oneskyapp.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -358,6 +360,7 @@
 					"$(PROJECT_DIR)/OneSkyOTAPlugin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oneskyapp.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
