@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name              = "OneSkyOTAPlugin"
-  s.version           = "0.9.4"
+  s.version           = "0.9.5"
   s.summary           = "OneSkyOTAPlugin enables over-the-air translation update for your iOS Apps"
   s.homepage          = "https://github.com/onesky/plugin-ios-ota"
   s.license           = { :type => "Commercial", :text => "Copyright © 2015 OneSky Inc. All rights reserved. http://www.oneskyapp.com" }
@@ -20,14 +20,14 @@ Pod::Spec.new do |s|
 
   s.platform          = :ios, '6.0'
   s.requires_arc      = true
-                      
+
   s.source_files      = 'OneSkyOTAPlugin/**/*.h'
   s.vendored_library  = 'OneSkyOTAPlugin/libOneSkyOTAPlugin.a'
   s.library           = 'OneSkyOTAPlugin'
   s.preserve_paths    = ['OneSkyOTAPlugin/ibsupport']
   s.frameworks        = 'UIKit'
-                      
-  s.xcconfig          = { 
+
+  s.xcconfig          = {
     'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/OneSkyOTAPlugin"',
     'OTHER_LDFLAGS' => '-ObjC',
   }
