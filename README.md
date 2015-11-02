@@ -7,12 +7,12 @@ Installation
 ------------
 
 #### Download OneSkyOTAPlugin.framework
-1. [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.9.5/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
+1. [`OneSkyOTAPlugin.zip`](https://github.com/onesky/plugin-ios-ota/releases/download/0.9.6/OneSkyOTAPlugin.zip) from the release tab and drag the folder into the **Frameworks** section of your **Project Navigator**.
 2. Under **Build Settings** of the target, add ```-ObjC``` to **Other Linker Flags** setting.
 
 #### CocoaPods
 ```
-pod 'OneSkyOTAPlugin', '~> 0.9.5'
+pod 'OneSkyOTAPlugin', '~> 0.9.6'
 ```
 
 Integration
