@@ -20,9 +20,9 @@
      Go to "Project settings > Privacy > String out API" on OneSky platform
      for details.
      */
-    [OneSkyOTAPlugin provideAPIKey:@"Kc9XXu3bsFpAJsDI6BjX08WoRtYLPhtp"
+    [OneSkyOTAPlugin provideAPIKey:@"E1pO0tjuOJ9xWw4VmqargWcD4YDEq7AU"
                          APISecret:nil
-                         projectID:@"32417"];
+                         projectID:@"56727"];
     [OneSkyOTAPlugin checkForUpdate];
     
     // Test OSLocalizedString calls
