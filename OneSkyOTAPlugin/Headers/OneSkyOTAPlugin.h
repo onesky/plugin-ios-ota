@@ -14,6 +14,9 @@
 #define OSLocalizedStringFromTable(key, tbl, comment) \
 [OneSkyOTAPlugin localizedStringForKey:(key) value:@"" table:(tbl)]
 
+#define OSLocalizedStringWithDefaultValue(key, tbl, val, comment) \
+[OneSkyOTAPlugin localizedStringForKey:(key) value:val table:(tbl)]
+
 /*
  This notification is sent when new translation data is available and 
  downloaded, observe this notification and update IB accordingly.
