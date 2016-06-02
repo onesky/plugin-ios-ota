@@ -62,6 +62,7 @@ Simply replace ```NSLocalizedString``` with ```OSLocalizedString```, the plugin 
 ``` objective-c
 OSLocalizedString(key, comment)
 OSLocalizedStringFromTable(key, tbl, comment)
+OSLocalizedStringWithDefaultValue(key, tbl, val, comment)
 ```
 
 Language
