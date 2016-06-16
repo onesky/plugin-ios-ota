@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name              = "OneSkyOTAPlugin"
-  s.version           = "0.9.11"
+  s.version           = "0.9.12"
   s.summary           = "OneSkyOTAPlugin enables over-the-air translation update for your iOS Apps"
   s.homepage          = "https://github.com/onesky/plugin-ios-ota"
   s.license           = { :type => "Commercial", :text => "Copyright © 2015 OneSky Inc. All rights reserved. http://www.oneskyapp.com" }
