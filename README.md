@@ -12,7 +12,7 @@ Installation
 
 #### CocoaPods
 ```
-pod 'OneSkyOTAPlugin', '~> 0.9.11'
+pod 'OneSkyOTAPlugin', '~> 0.9.13'
 ```
 
 Integration
