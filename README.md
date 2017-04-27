@@ -3,7 +3,7 @@ OneSky Over-The-Air Plugin for iOS
 
 Over-the-air translation update for your iOS apps with OneSky.
 
-**Note:** This plugin only supports `.strings`, `.xib`, and `.storyboard` files.
+**Note:** This plugin only supports `.strings` files.
 
 Installation
 ------------
