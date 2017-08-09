@@ -67,6 +67,19 @@ OSLocalizedStringFromTable(key, tbl, comment)
 OSLocalizedStringWithDefaultValue(key, tbl, val, comment)
 ```
 
+Swift 3
+----------------
+You can public functions to wrap the code in Swift
+``` swift
+public func OSLocalizedString(_ key: String, comment: String) -> String {
+    return OneSkyOTAPlugin.localizedString(forKey: key, value: "", table: nil)
+}
+
+public func OSLocalizedStringFromTable(_ key: String, table: String, comment: String) -> String {
+    return OneSkyOTAPlugin.localizedString(forKey: key, value: "", table: table)
+}
+```
+
 Language
 ----------------
 
