@@ -17,6 +17,23 @@
 #define OSLocalizedStringWithDefaultValue(key, tbl, val, comment) \
 [OneSkyOTAPlugin localizedStringForKey:(key) value:val table:(tbl)]
 
+#define OSLocalizedStringFromTableWithFallbackToBundle(key, tbl, bundle, comment) \
+[OneSkyOTAPlugin localizedStringForKey:(key) value:@"" table:(tbl) fallbackBundle:(bundle)]
+
+typedef NS_ENUM(NSUInteger, OneSkyLogLevel){
+    // no logs
+    OneSkyLogLevelOff = 0,
+
+    // error logs only
+    OneSkyLogLevelError = 2,
+
+    // error and network logs
+    OneSkyLogLevelDebug = 4,
+
+    // debug and other info, e.g. string look up
+    OneSkyLogLevelInfo = 8
+};
+
 /*
  This notification is sent when new translation data is available and 
  downloaded, observe this notification and update IB accordingly.
@@ -63,6 +80,22 @@ extern NSString  *const OneSkyOTAPluginTranslationsDidUpdateNotification;
 
 /*!
  @abstract
+ Method for retrieving localized strings.
+
+ @param key The key for a string in the table identified by tableName.
+
+ @param value The value to return if key is nil or if a localized string for key can’t be found in the table.
+
+ @param table tableName - The receiver’s string table to search. If tableName is nil or is an empty string, the method attempts to use the table in Localizable.strings.
+
+ @prarm bundle bundle - The bundle to fallback to when the translation is not found in OneSky strings
+
+ @discussion in order for our plugin to identify your custom bundles,
+ */
++ (NSString *)localizedStringForKey:(NSString *)key value:(NSString *)value table:(NSString *)tableName fallbackBundle:(NSBundle *)bundle;
+
+/*!
+ @abstract
  Method to request update of translations immediately
  */
 + (void)checkForUpdate;
@@ -76,15 +109,21 @@ extern NSString  *const OneSkyOTAPluginTranslationsDidUpdateNotification;
 
 /*!
  @abstract
- Set whether to show debug logs in console, default is YES
+ Set log level, default is OneSkyLogLevelDebug
  */
-+ (void)setDebug:(BOOL)debug;
++ (void)setLogLevel:(OneSkyLogLevel)level;
 
 /*!
  @abstract
  Set the language to use for -localizedStringForKey:value:table: calls, default is [[NSLocale preferredLanguages] firstObject]
  */
 + (void)setLanguage:(NSString *)language;
+
+/*!
+ @abstract
+ Register fallback bundles, must be called before using OSLocalizedStringFromTableWithFallbackToBundle
+ */
++ (void)registerFallbackBundles:(NSArray *)bundles;
 
 /*!
  @abstract
