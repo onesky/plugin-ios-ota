@@ -13,10 +13,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    /* 
+    /*
      For security reason you might not want to embed the API secret in
-     the source code of your application, in this case you can skip the 
-     API secret by setting the string output API privacy to public, 
+     the source code of your application, in this case you can skip the
+     API secret by setting the string output API privacy to public,
      Go to "Project settings > Privacy > String out API" on OneSky platform
      for details.
      */
@@ -24,16 +24,24 @@
                          APISecret:nil
                          projectID:@"56727"];
     [OneSkyOTAPlugin checkForUpdate];
-    
+    // force language
+    [OneSkyOTAPlugin setLanguage:@"zh-HK"];
+
+    // set a custom log level
+    [OneSkyOTAPlugin setLogLevel:OneSkyLogLevelInfo];
+
     // Test OSLocalizedString calls
     NSLog(@"Monday = %@", OSLocalizedString(@"Monday", nil));
-    NSLog(@"Tuesday = %@", OSLocalizedString(@"Tuesday", nil));
-    
-    // Force language
-    [OneSkyOTAPlugin setLanguage:@"pt-PT"];
-    
-    // Enable debug option, default is YES
-    [OneSkyOTAPlugin setDebug:YES];
+
+    // Fallback to specific bundle for callback
+    NSString *testBundlePath = [[NSBundle mainBundle] pathForResource:@"TestBundle" ofType:@"bundle"];
+    NSBundle *testBundle = [NSBundle bundleWithPath:testBundlePath];
+    // register before use
+    [OneSkyOTAPlugin registerFallbackBundles:@[testBundle]];
+    NSLog(@"Tuesday = %@", OSLocalizedStringFromTableWithFallbackToBundle(@"Tuesday", nil, testBundle, nil));
+
+    // Custom default value
+    NSLog(@"Wednesday = %@", OSLocalizedStringWithDefaultValue(@"Wednesday", @"Days", @"Default Day", nil));
 
     return YES;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048AE61C20B93C04003F5201 /* TestBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 048AE61B20B93C04003F5201 /* TestBundle.bundle */; };
 		FB56D8A41BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB56D8A21BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a */; };
 		FB6757DD19933E1C00E96A12 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6757DB19933E1C00E96A12 /* Storyboard.storyboard */; };
 		FB6757E019933E3100E96A12 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB6757DE19933E3100E96A12 /* Localizable.strings */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048AE61B20B93C04003F5201 /* TestBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TestBundle.bundle; path = "../../plugin-ios-ota-src/OneSkyOTADemo/TestBundle.bundle"; sourceTree = "<group>"; };
 		FB56D8A01BA2C0C0001FB4B7 /* OneSkyOTAPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneSkyOTAPlugin.h; sourceTree = "<group>"; };
 		FB56D8A11BA2C0C0001FB4B7 /* ibsupport */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ibsupport; sourceTree = "<group>"; };
 		FB56D8A21BA2C0C0001FB4B7 /* libOneSkyOTAPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOneSkyOTAPlugin.a; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		FB7344F61980C9E40062424F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				048AE61B20B93C04003F5201 /* TestBundle.bundle */,
 				FB6757DE19933E3100E96A12 /* Localizable.strings */,
 				FB7344F71980C9E40062424F /* OneSkyOTADemo-Info.plist */,
 				FB7344F81980C9E40062424F /* InfoPlist.strings */,
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7344FA1980C9E40062424F /* InfoPlist.strings in Resources */,
+				048AE61C20B93C04003F5201 /* TestBundle.bundle in Resources */,
 				FB6757E019933E3100E96A12 /* Localizable.strings in Resources */,
 				FB7345021980C9E40062424F /* Images.xcassets in Resources */,
 				FB6757DD19933E1C00E96A12 /* Storyboard.storyboard in Resources */,
